@@ -1,0 +1,26 @@
+# Step by step procedure
+
+1. Firstly, on Amazon AWS create an EC2 ubuntu instance.
+2 sudo su
+3. Then install Apache 2 web server on your ec2 instance.
+And for installing apache2 use the following commands:
+
+apt-get update
+apt-get install apache2
+Do you want to continue ? Y/N yes
+
+4. Now our apache2 webs server is completely installed and we can check it by accessing our public ip address on our browser and there it'll show the apache2 default page.
+5. Now we'll create a new session on mobaxterm for our aws ec2 instance.
+6. Open mobaxterm if installed on your pc. Then, click on Session on top left corner and then SSH. Then in remote host fill up the public ip address of your aws ec2 instance. And in private key select the key you created earlier for that specific instance.
+7. For hosting website, first you need to drag and drop your project folder on the mobaxtern session and it'll be exported there with ther files.
+8. To verify that, go to your ec2 instance and follow the commands:
+ls
+cd pink-penguin-html
+ls
+cd ..
+cp -r pink-penguin-html/* /var/www/html  (This will copy all the contents from your project directory to the html directory)
+
+9. And, there you go ! You can go and refresh the browser where the apache2 default page opened. Now your website will be there.
+
+
+
